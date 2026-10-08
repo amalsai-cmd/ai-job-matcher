@@ -182,3 +182,460 @@
     border-right-color: var(--border);
   }
 }
+```css
+/* ============================================================
+   RESPONSIVE DASHBOARD
+   ============================================================ */
+
+/* Prevent horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ============================================================
+   TABLET - 1024px
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .dashboard-content {
+    width: calc(100% - 220px);
+    padding: 25px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-card {
+    width: 100%;
+  }
+
+}
+
+
+/* ============================================================
+   TABLET / SMALL LAPTOP - 900px
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 190px;
+    min-width: 190px;
+  }
+
+  .dashboard-content {
+    width: calc(100% - 190px);
+    padding: 20px;
+  }
+
+  .sidebar-logo {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 26px;
+  }
+
+  .dashboard-header p {
+    font-size: 13px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE - 768px
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Turn sidebar into top navigation */
+
+  .dashboard-page {
+    display: block !important;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  .sidebar-logo {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    padding: 9px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .sidebar-bottom {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .sidebar-bottom .nav-item {
+    text-align: center !important;
+  }
+
+
+  /* Main content */
+
+  .dashboard-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 15px;
+  }
+
+
+  /* Header */
+
+  .dashboard-header {
+    width: 100%;
+    box-sizing: border-box;
+    gap: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-header p {
+    font-size: 13px;
+  }
+
+  .user-avatar {
+    flex-shrink: 0;
+  }
+
+
+  /* Stats */
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* Dashboard cards */
+
+  .dashboard-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+  }
+
+
+  /* Section headers */
+
+  .section-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .section-header h2 {
+    font-size: 19px;
+  }
+
+  .section-header p {
+    font-size: 12px;
+  }
+
+
+  /* Resume upload */
+
+  .upload-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .selected-file {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  /* Job search */
+
+  .dashboard-card input,
+  .dashboard-card select,
+  .dashboard-card button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* Job cards */
+
+  .dashboard-card > div {
+    max-width: 100%;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE - 600px
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    padding: 14px 12px;
+  }
+
+  .sidebar-logo {
+    font-size: 15px;
+  }
+
+  .sidebar-nav {
+    gap: 3px;
+  }
+
+  .nav-item {
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+
+  .dashboard-content {
+    padding: 15px 10px;
+  }
+
+
+  /* Header */
+
+  .dashboard-header {
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .dashboard-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+
+  /* Avatar */
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 13px;
+  }
+
+
+  /* Cards */
+
+  .dashboard-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-card h2 {
+    font-size: 22px;
+  }
+
+
+  /* Upload */
+
+  .upload-box {
+    padding: 20px 10px;
+  }
+
+  .upload-icon {
+    font-size: 30px;
+  }
+
+  .upload-box h3 {
+    font-size: 17px;
+  }
+
+
+  /* Job cards */
+
+  .dashboard-card [style*="minmax(320px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES - 480px
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .sidebar {
+    padding: 12px 8px;
+  }
+
+  .sidebar-logo {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-nav {
+    justify-content: center;
+  }
+
+  .nav-item {
+    padding: 7px 7px;
+    font-size: 10px;
+  }
+
+  .dashboard-content {
+    padding: 12px 8px;
+  }
+
+
+  /* Header */
+
+  .dashboard-header {
+    flex-direction: row;
+  }
+
+  .dashboard-header h1 {
+    font-size: 20px;
+  }
+
+
+  /* Dashboard cards */
+
+  .dashboard-card {
+    padding: 13px;
+  }
+
+
+  /* Search section */
+
+  .dashboard-card input,
+  .dashboard-card select,
+  .dashboard-card button {
+    width: 100% !important;
+  }
+
+
+  /* Job header */
+
+  .dashboard-card h3 {
+    font-size: 16px;
+  }
+
+
+  /* Match circle */
+
+  .match-excellent,
+  .match-good,
+  .match-average,
+  .match-low {
+    min-width: 55px !important;
+    width: 55px;
+    height: 55px !important;
+    flex-shrink: 0;
+  }
+
+
+  /* Apply button */
+
+  .dashboard-card a {
+    white-space: nowrap;
+  }
+
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES - 360px
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+  .sidebar-logo {
+    font-size: 12px;
+  }
+
+  .nav-item {
+    padding: 6px;
+    font-size: 9px;
+  }
+
+  .dashboard-content {
+    padding: 10px 6px;
+  }
+
+  .dashboard-card {
+    padding: 11px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 18px;
+  }
+
+  .dashboard-header p {
+    font-size: 11px;
+  }
+
+  .stat-card h2 {
+    font-size: 20px;
+  }
+
+}
