@@ -294,16 +294,7 @@ KL University
 
 This project is developed for educational and portfolio purposes.
 
-
-### One thing I strongly recommend
-
-Don't put your actual:
-
-```text
-ADZUNA_APP_ID
-ADZUNA_APP_KEY
-GMAIL_EMAIL
-GMAIL_APP_PASSWORD<img width="1830" height="848" alt="Screenshot 2026-10-08 120808" src="https://github.com/user-attachments/assets/6f051ca7-faa5-45f7-8e7e-d1dada7b635d" />
+<img width="1830" height="848" alt="Screenshot 2026-10-08 120808" src="https://github.com/user-attachments/assets/6f051ca7-faa5-45f7-8e7e-d1dada7b635d" />
 <img width="1876" height="883" alt="Screenshot 2026-10-08 120752" src="https://github.com/user-attachments/assets/821daf6d-beec-405f-b129-40c6914015c7" />
 <img width="1912" height="890" alt="Screenshot 2026-10-08 120544" src="https://github.com/user-attachments/assets/47d4af12-4b4a-4761-812b-2f6f9c08cb4f" />
 <img width="1321" height="542" alt="Screenshot 2026-10-08 120431" src="https://github.com/user-attachments/assets/3462811b-0e1c-4ce8-8389-2dc75adef41f" />
