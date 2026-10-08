@@ -1,68 +1,62 @@
 # 🤖 AI Job Matcher
 
-AI Job Matcher is a full-stack web application that helps job seekers find relevant job opportunities based on their resume skills.
+AI Job Matcher is a full-stack web application that helps job seekers discover relevant job opportunities based on their resume skills.
 
 The application analyzes an uploaded resume, extracts technical skills, fetches real-time job listings, and calculates a match percentage between the candidate's skills and each job's requirements.
 
----
-
 ## 🚀 Features
 
-- 🔐 User Registration and Login
-- 📧 Email OTP Verification
-- 📄 Resume Upload and Analysis
-- 🧠 Automatic Resume Skill Extraction
-- 🔎 Real-Time Job Search
-- 🎯 Resume-to-Job Skill Matching
-- 📊 Job Match Percentage
-- ✅ Matched Skills Detection
-- ❌ Missing Skills Detection
-- 💾 Save Jobs
-- 🔗 Direct Job Application Links
-- 📱 Responsive Dashboard
-- 🗄️ PostgreSQL Database
-- 🔒 Password Hashing with Bcrypt
-- 🌐 REST API Backend
-
----
+* 🔐 User Registration and Login
+* 📧 Email OTP Verification
+* 📄 Resume Upload and Analysis
+* 🧠 Automatic Resume Skill Extraction
+* 🔎 Real-Time Job Search
+* 🎯 Resume-to-Job Skill Matching
+* 📊 Job Match Percentage
+* ✅ Matched Skills Detection
+* ❌ Missing Skills Detection
+* 💾 Save Jobs
+* 🔗 Direct Job Application Links
+* 📱 Responsive Dashboard
+* 🗄️ PostgreSQL Database
+* 🔒 Password Hashing with Bcrypt
+* 🌐 REST API Backend
 
 ## 🛠️ Technologies Used
 
 ### Frontend
 
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Vite
-- React Router
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Vite
+* React Router
 
 ### Backend
 
-- Python
-- FastAPI
-- SQLAlchemy
-- REST APIs
-- Bcrypt
-- Python-dotenv
+* Python
+* FastAPI
+* SQLAlchemy
+* REST APIs
+* Bcrypt
+* Python-dotenv
 
 ### Database
 
-- PostgreSQL
+* PostgreSQL
 
 ### Job API
 
-- Adzuna Jobs API
+* Adzuna Jobs API
 
 ### Development Tools
 
-- Git
-- GitHub
-- VS Code
-- Postman
-- Swagger UI
-
----
+* Git
+* GitHub
+* VS Code
+* Postman
+* Swagger UI
 
 ## 🏗️ Project Architecture
 
@@ -93,216 +87,260 @@ AI Job Matcher
 │
 ├── .gitignore
 └── README.md
-🎯 Job Matching
+```
+
+## 🎯 How Job Matching Works
 
 The application compares the skills detected in the user's resume with skills identified from job descriptions.
 
-For example:
+### Example
 
-Resume Skills:
+**Resume Skills**
+
+```text
 Python
 Java
 React
 SQL
 PostgreSQL
+```
 
-Job Requirements:
+**Job Requirements**
+
+```text
 Python
 SQL
 React
 Docker
 AWS
+```
 
-Matched Skills:
+**Matched Skills**
+
+```text
 ✓ Python
 ✓ SQL
 ✓ React
+```
 
-Missing Skills:
+**Missing Skills**
+
+```text
 ✗ Docker
 ✗ AWS
+```
 
-Match:
-60%
+**Match Percentage: 60%**
 
 This helps users understand which jobs are a good match and which skills they may need to improve.
 
-📄 Resume Analysis
+## 📄 Resume Analysis
 
 The resume parser extracts information such as:
 
-Name
-Skills
-Education
-Experience
-Projects
-Certifications
+* Name
+* Skills
+* Education
+* Experience
+* Projects
+* Certifications
 
 The extracted information is then used by the job matching system.
 
-🔎 Real-Time Jobs
+## 🔎 Real-Time Job Search
 
-The application uses the Adzuna Jobs API to retrieve current job listings.
+The application uses the **Adzuna Jobs API** to retrieve current job listings.
 
 Users can search using:
 
-Job keyword
-Location
-Minimum match percentage
+* Job keyword
+* Location
+* Minimum match percentage
 
-Example:
+### Example
 
+```text
 Keyword: Software Developer
 Location: India
 Minimum Match: 60%
-🔐 Authentication
+```
+
+## 🔐 Authentication
 
 The application includes:
 
-User registration
-Secure password hashing
-Email OTP verification
-Login authentication
-Protected dashboard access
+* User registration
+* Secure password hashing
+* Email OTP verification
+* Login authentication
+* Protected dashboard access
 
 Passwords are hashed using Bcrypt before being stored in the database.
 
-🗄️ Database
+## 🗄️ Database
 
 The application uses PostgreSQL.
 
-Main tables include:
+### Main Tables
 
+```text
 users
 otp_verifications
 resumes
 jobs
 saved_jobs
-⚙️ Installation
-1. Clone the Repository
+```
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/amalsai-cmd/ai-job-matcher.git
 cd ai-job-matcher
-2. Backend Setup
+```
+
+### 2. Backend Setup
 
 Go to the backend directory:
 
+```bash
 cd backend
+```
 
 Create a virtual environment:
 
+```bash
 python -m venv venv
+```
 
 Activate it on Windows:
 
+```powershell
 .\venv\Scripts\activate
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-Create a .env file:
+### 3. Environment Variables
 
+Create a `.env` file inside the `backend` directory:
+
+```env
 ADZUNA_APP_ID=your_adzuna_app_id
 ADZUNA_APP_KEY=your_adzuna_app_key
 
 GMAIL_EMAIL=your_gmail_address
 GMAIL_APP_PASSWORD=your_gmail_app_password
+```
 
-⚠️ Never upload .env to GitHub.
+⚠️ **Never upload `.env` or real API credentials to GitHub.**
 
-Start the backend:
+### 4. Start the Backend
 
+```bash
 uvicorn main:app --reload
+```
 
 Backend:
 
+```text
 http://127.0.0.1:8000
+```
 
-API documentation:
+API Documentation:
 
+```text
 http://127.0.0.1:8000/docs
-3. Frontend Setup
+```
+
+### 5. Frontend Setup
 
 Open another terminal:
 
+```bash
 cd frontend
+```
 
 Install dependencies:
 
+```bash
 npm install
+```
 
 Start the frontend:
 
+```bash
 npm run dev
+```
 
 Frontend:
 
+```text
 http://localhost:5173
-🔑 Environment Variables
+```
 
-The following environment variables are required:
+## 🔑 Environment Variables
 
-Variable	Description
-ADZUNA_APP_ID	Adzuna application ID
-ADZUNA_APP_KEY	Adzuna API key
-GMAIL_EMAIL	Gmail sender address
-GMAIL_APP_PASSWORD	Gmail app password
+| Variable             | Description           |
+| -------------------- | --------------------- |
+| `ADZUNA_APP_ID`      | Adzuna application ID |
+| `ADZUNA_APP_KEY`     | Adzuna API key        |
+| `GMAIL_EMAIL`        | Gmail sender address  |
+| `GMAIL_APP_PASSWORD` | Gmail app password    |
 
-Never commit real credentials to GitHub.
+> Never commit real credentials to GitHub.
 
-📸 Screenshots
-Login
+## 📸 Screenshots
 
-Add your login page screenshot here.
+### 🔐 Login
 
-docs/screenshots/login.png
-Dashboard
+The application provides a secure login interface for registered users.
 
-Add your dashboard screenshot here.
+### 📝 Registration
 
-docs/screenshots/dashboard.png
-Resume Analysis
+Users can create an account and verify their email through OTP authentication.
 
-Add your resume analysis screenshot here.
+### 📄 Resume Analysis
 
-docs/screenshots/resume-analysis.png
-Job Matching
+Users can upload their resume and view extracted information including skills, education, experience, projects, and certifications.
 
-Add your job matching screenshot here.
+### 🎯 Job Matching
 
-docs/screenshots/job-matching.png
-📌 Future Improvements
-🤖 AI-powered resume recommendations
-📈 Skill gap analysis
-🎯 Personalized career recommendations
-📝 AI resume improvement suggestions
-📊 Application tracking
-🔔 Job alerts
-⭐ Advanced job ranking
-🧠 Improved semantic skill matching
-☁️ Cloud deployment
-📱 Mobile-friendly improvements
-👨‍💻 Developer
+The dashboard displays real-time jobs along with their match percentage, matched skills, and missing skills.
 
-Murari Venkata Amal Sai
+### 🔎 Job Search
+
+Users can search for jobs by keyword and location and filter results based on their desired match percentage.
+
+### 💾 Saved Jobs
+
+Users can save interesting job opportunities and access them later.
+
+## 📌 Future Improvements
+
+* 🤖 AI-powered resume recommendations
+* 📈 Skill gap analysis
+* 🎯 Personalized career recommendations
+* 📝 AI resume improvement suggestions
+* 📊 Application tracking
+* 🔔 Job alerts
+* ⭐ Advanced job ranking
+* 🧠 Improved semantic skill matching
+* ☁️ Cloud deployment
+* 📱 Mobile application
+
+## 👨‍💻 Developer
+
+**Murari Venkata Amal Sai**
 
 B.Tech – Computer Science & Information Technology
-
 KL University
 
-📄 License
+## 📄 License
 
 This project is developed for educational and portfolio purposes.
-
-<img width="1830" height="848" alt="Screenshot 2026-10-08 120808" src="https://github.com/user-attachments/assets/6f051ca7-faa5-45f7-8e7e-d1dada7b635d" />
-<img width="1876" height="883" alt="Screenshot 2026-10-08 120752" src="https://github.com/user-attachments/assets/821daf6d-beec-405f-b129-40c6914015c7" />
-<img width="1912" height="890" alt="Screenshot 2026-10-08 120544" src="https://github.com/user-attachments/assets/47d4af12-4b4a-4761-812b-2f6f9c08cb4f" />
-<img width="1321" height="542" alt="Screenshot 2026-10-08 120431" src="https://github.com/user-attachments/assets/3462811b-0e1c-4ce8-8389-2dc75adef41f" />
-<img width="1912" height="903" alt="Screenshot 2026-10-08 115742" src="https://github.com/user-attachments/assets/619a4526-0fc0-41aa-95ef-6f0448334fa1" />
-<img width="1839" height="875" alt="Screenshot 2026-10-08 115726" src="https://github.com/user-attachments/assets/7023b069-71a5-408a-9886-ea348bf66b62" />
-<img width="1888" height="887" alt="Screenshot 2026-10-08 115716" src="https://github.com/user-attachments/assets/e570cac2-4ac9-4e3f-8baa-9b4c0f0ac202" />
-<img width="1918" height="794" alt="Screenshot 2026-10-08 115704" src="https://github.com/user-attachments/assets/9c0326ad-561a-49a8-97b5-50b0eafac301" />
-<img width="1895" height="899" alt="Screenshot 2026-10-08 115638" src="https://github.com/user-attachments/assets/e3b0f327-ee69-4f70-98ef-81128981626e" />
-<img width="1918" height="903" alt="Screenshot 2026-10-08 115504" src="https://github.com/user-attachments/assets/fd19d2bd-a1fe-4bac-a6e8-413b31749e38" />
-<img width="1918" height="903" alt="Screenshot 2026-10-08 115204" src="https://github.com/user-attachments/assets/d92e4078-2ec8-4666-aec1-13f822f6dd20" />
-<img width="1914" height="1116" alt="Screenshot 2026-10-08 115128" src="https://github.com/user-attachments/assets/187a4cd3-9e6c-4b97-8825-72d12174bbed" />
